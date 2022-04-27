@@ -1,0 +1,40 @@
+{
+  "name": "xylemical/account",
+  "type": "library",
+  "license": "MIT",
+  "description": "Provides framework for identification, authentication and authorization.",
+  "keywords": [
+    "framework",
+    "identification",
+    "authentication",
+    "authorization",
+    "account",
+    "user"
+  ],
+  "homepage": "https://github.com/xylemical/account",
+  "autoload": {
+    "psr-4": {
+      "Xylemical\\Account\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Xylemical\\Account\\": "tests/src/"
+    }
+  },
+  "require": {
+    "php": ">7.4"
+  },
+  "require-dev": {
+    "xylemical/composer-dev-bundle": "^0.1.1"
+  },
+  "scripts": {
+    "tests": "vendor/bin/phpunit && vendor/bin/phpstan analyse && vendor/bin/phpcs",
+    "test-coverage": "php -dxdebug.mode=coverage vendor/bin/phpunit --coverage-html report"
+  },
+  "config": {
+    "allow-plugins": {
+      "phpstan/extension-installer": true
+    }
+  }
+}
